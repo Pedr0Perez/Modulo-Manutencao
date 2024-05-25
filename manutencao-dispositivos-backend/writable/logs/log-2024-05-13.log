@@ -1,0 +1,85 @@
+CRITICAL - 2024-05-13 22:18:16 --> ErrorException: Undefined property: stdClass::$firstName
+in APPPATH\Controllers\UserController.php on line 26.
+ 1 APPPATH\Controllers\UserController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$firstName', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 26)
+ 2 APPPATH\Controllers\UserController.php(58): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-13 23:01:47 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:01:47 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:01:47 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:02:38 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:02:38 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:02:38 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:02:56 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:02:56 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:02:56 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:03:14 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:03:14 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:03:14 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:03:30 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:03:30 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:03:30 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:03:37 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:03:37 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:03:37 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:05:52 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:05:52 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:05:52 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:06:44 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:06:44 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:06:44 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:08:35 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+ERROR - 2024-05-13 23:08:35 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQU'.
+ERROR - 2024-05-13 23:08:35 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-05-13 23:10:02 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+CRITICAL - 2024-05-13 23:10:02 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(75): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 23:10:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é ().
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Luigi\', \'Bros\', \'pedro.perezrigi@gmail.com\', \'\', \'$2y$10$quzs9eUJN/bOKC2kPp97u.2chkBJKKpQ6iT54rAllyYjcCLWuA5ne\', \'2024-05-15T03:00:00.000Z\', \'M\', \'Japão\', \'Sonobe\', \'Distrito de Funai\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Luigi\', \'Bros\', \'pedro.perezrigi@gmail.com\', \'\', \'$2y$10$quzs9eUJN/bOKC2kPp97u.2chkBJKKpQ6iT54rAllyYjcCLWuA5ne\', \'2024-05-15T03:00:00.000Z\', \'M\', \'Japão\', \'Sonobe\', \'Distrito de Funai\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(75): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-13 23:43:22 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+CRITICAL - 2024-05-13 23:43:22 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(75): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 23:43:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'\', \'\', \'pedro.perezrigi@gmail.com\', \'\', \'$2y$10$cq5NCtsbu/GjGN412S5/0O4NVNq2lQWY3JqEcKK.FT78eObYhCKNG\', \'\', \'\', \'\', \'\', \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'\', \'\', \'pedro.perezrigi@gmail.com\', \'\', \'$2y$10$cq5NCtsbu/GjGN412S5/0O4NVNq2lQWY3JqEcKK.FT78eObYhCKNG\', \'\', \'\', \'\', \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(75): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()

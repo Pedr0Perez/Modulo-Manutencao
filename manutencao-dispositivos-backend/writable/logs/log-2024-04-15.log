@@ -1,0 +1,1316 @@
+CRITICAL - 2024-04-15 20:39:27 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, none returned
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 20:39:59 --> Michalsn\Minifier\Exceptions\MinifierException: There is no file with versioning. Run "php spark minify:all" command first.
+in VENDORPATH\michalsn\minifier\src\Exceptions\MinifierException.php on line 12.
+ 1 VENDORPATH\michalsn\minifier\src\Minifier.php(359): Michalsn\Minifier\Exceptions\MinifierException::forNoVersioningFile()
+ 2 VENDORPATH\michalsn\minifier\src\Minifier.php(83): Michalsn\Minifier\Minifier->getVersion('./assets')
+ 3 VENDORPATH\michalsn\minifier\src\Helpers\minifier_helper.php(14): Michalsn\Minifier\Minifier->load('all.min.js')
+ 4 APPPATH\Controllers\Home.php(10): minifier('all.min.js')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:16:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\ci_api\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\ci_api\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\ci_api\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:16:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `SIS_USERS`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:17:34 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:17:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "ci4"."dbo"."SIS_USERS"', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:17:41 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:17:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "ci4"."dbo"."SIS_USERS"', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 21:17:44 --> Error: Class "CodeIgniter\Database\SQLSRVa\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('SQLSRVa', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(153): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\UserController.php(11): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:17:49 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:17:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "ci4"."dbo"."SIS_USERS"', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:20:14 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:20:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "ci4"."dbo"."SIS_USERS"', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:20:15 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:20:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "ci4"."dbo"."SIS_USERS"', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:20:15 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:20:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "ci4"."dbo"."SIS_USERS"', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:20:16 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\wamp64\www\ci_api\system\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\wamp64\www\ci_api\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#7 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-15 21:20:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "ci4"."dbo"."SIS_USERS"', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:22:18 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:22:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:22:25 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:22:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:22:26 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:22:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:22:27 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:22:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:22:27 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:22:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:22:27 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:22:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:22:27 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:22:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:29:03 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:29:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:29:34 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:29:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:29:35 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:29:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:29:35 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:29:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 21:29:35 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 21:29:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 22:06:28 --> ParseError: syntax error, unexpected token ":"
+in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\ci_api\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 22:06:39 --> ParseError: syntax error, unexpected token ":"
+in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\ci_api\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:21:17 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:21:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:21:50 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:21:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:21:51 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:21:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:21:51 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:21:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:21:51 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:21:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:21:52 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:21:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:22:45 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:22:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:22:46 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:22:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:22:46 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:22:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:22:46 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:22:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:22:46 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:22:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:22:47 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:22:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:22:47 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:22:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:17 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:17 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:18 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:18 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:18 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:18 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:19 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:19 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:23:19 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\wamp64\www\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\wamp64\www\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\wamp64\www\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\wamp64\www\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\wamp64\www\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:23:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:28:00 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\xampp\htdocs\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:28:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:28:01 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure() in C:\xampp\htdocs\ci_api\system\Database\SQLSRV\Connection.php:128
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:28:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: Call to undefined function CodeIgniter\Database\SQLSRV\sqlsrv_configure()
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:31:26 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server]Provedor TCP: Nenhuma conex√£o p√¥de ser feita porque a m√°quina de destino as recusou ativamente.
+ SQLSTATE: 08001, code: 10061
+[Microsoft][ODBC Driver 17 for SQL Server]O tempo limite do logon expirou SQLSTATE: HYT00, code: 0
+[Microsoft][ODBC Driver 17 for SQL Server]Erro relatado pela rede ou espec√≠fico √† inst√¢ncia ao estabelecer conex√£o com o SQL Server. O servidor n√£o foi encontrado ou n√£o est√° acess√≠vel. Verifique se o nome da inst√¢ncia est√° correto e se o SQL Server est√° configurado para permitir conex√µes remotas. Para obter mais informa√ß√µes, consulte os Manuais Online do SQL Server. SQLSTATE: 08001, code: 10061 in C:\xampp\htdocs\ci_api\system\Database\SQLSRV\Connection.php:142
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:31:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: [Microsoft][ODBC Driver 17 for SQL Server]Provedor TCP: Nenhuma conex√£o p√¥de ser feita porque a m√°quina de destino as recusou ativamente.
+ SQLSTATE: 08001, code: 10061
+[Microsoft][ODBC Driver 17 for SQL Server]O tempo limite do logon expirou SQLSTATE: HYT00, code: 0
+[Microsoft][ODBC Driver 17 for SQL Server]Erro relatado pela rede ou espec√≠fico √† inst√¢ncia ao estabelecer conex√£o com o SQL Server. O servidor n√£o foi encontrado ou n√£o est√° acess√≠vel. Verifique se o nome da inst√¢ncia est√° correto e se o SQL Server est√° configurado para permitir conex√µes remotas. Para obter mais informa√ß√µes, consulte os Manuais Online do SQL Server. SQLSTATE: 08001, code: 10061
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 22:36:32 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server]Provedor TCP: Nenhuma conex√£o p√¥de ser feita porque a m√°quina de destino as recusou ativamente.
+ SQLSTATE: 08001, code: 10061
+[Microsoft][ODBC Driver 17 for SQL Server]O tempo limite do logon expirou SQLSTATE: HYT00, code: 0
+[Microsoft][ODBC Driver 17 for SQL Server]Erro relatado pela rede ou espec√≠fico √† inst√¢ncia ao estabelecer conex√£o com o SQL Server. O servidor n√£o foi encontrado ou n√£o est√° acess√≠vel. Verifique se o nome da inst√¢ncia est√° correto e se o SQL Server est√° configurado para permitir conex√µes remotas. Para obter mais informa√ß√µes, consulte os Manuais Online do SQL Server. SQLSTATE: 08001, code: 10061 in C:\xampp\htdocs\ci_api\system\Database\SQLSRV\Connection.php:142
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci_api\app\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM S...')
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\UserController->index()
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-04-15 22:36:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: [Microsoft][ODBC Driver 17 for SQL Server]Provedor TCP: Nenhuma conex√£o p√¥de ser feita porque a m√°quina de destino as recusou ativamente.
+ SQLSTATE: 08001, code: 10061
+[Microsoft][ODBC Driver 17 for SQL Server]O tempo limite do logon expirou SQLSTATE: HYT00, code: 0
+[Microsoft][ODBC Driver 17 for SQL Server]Erro relatado pela rede ou espec√≠fico √† inst√¢ncia ao estabelecer conex√£o com o SQL Server. O servidor n√£o foi encontrado ou n√£o est√° acess√≠vel. Verifique se o nome da inst√¢ncia est√° correto e se o SQL Server est√° configurado para permitir conex√µes remotas. Para obter mais informa√ß√µes, consulte os Manuais Online do SQL Server. SQLSTATE: 08001, code: 10061
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\UserController.php(12): CodeIgniter\Database\BaseConnection->query('SELECT * FROM SIS_WEB.dbo.SIS_USERS')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:06:58 --> ErrorException: Attempt to read property "email" on null
+in APPPATH\Controllers\AuthController.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "email" on null', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\AuthController.php', 21)
+ 2 APPPATH\Controllers\AuthController.php(14): App\Controllers\AuthController->setDadoAutenticao()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-15 23:07:08 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'email' inv√°lido.
+CRITICAL - 2024-04-15 23:07:08 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'email' inv√°lido.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "email" = :email:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+ 3 APPPATH\Controllers\AuthController.php(28): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:07:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'email' inv√°lido.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "email" = \'pedroperezrigi@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "email" = \'pedroperezrigi@gmail.com\'')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "email" = :email:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+ 5 APPPATH\Controllers\AuthController.php(28): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:11:10 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\AuthController.php on line 36.
+ 1 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:11:13 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\AuthController.php on line 36.
+ 1 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:11:14 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\AuthController.php on line 36.
+ 1 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:11:14 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\AuthController.php on line 36.
+ 1 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:11:18 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\AuthController.php on line 36.
+ 1 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:11:27 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\AuthController.php on line 36.
+ 1 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:11:29 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\AuthController.php on line 36.
+ 1 APPPATH\Controllers\AuthController.php(15): App\Controllers\AuthController->validarUsuario()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:33:15 --> ErrorException: Undefined variable $email
+in APPPATH\Controllers\AuthController.php on line 17.
+ 1 APPPATH\Controllers\AuthController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\AuthController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:38:52 --> TypeError: openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 97.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt([...], 'AES-256-CTR', 'XU“Ì’g™¬<≤õfÌ!|øÏÛËŸE◊ü¥¬TÓü,∫≈◊52É?˙ÉE:ø‘GÔ=KDêÏ•Ï˙vÍ', 1, 'øÑµjí§÷`”ØÎ\'5')
+ 2 APPPATH\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:38:52 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 C:\xampp\htdocs\ci_api\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 C:\xampp\htdocs\ci_api\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(TypeError), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#6 {main}
+  thrown
+„ÄêPrevious Exception„Äë
+TypeError
+openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+#0 C:\xampp\htdocs\ci_api\system\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt(Array, 'AES-256-CTR', 'XU\xD2\xED\xD5g\xAA\x02\x0E\xC2\x18<\xB2\r\x9B...', 1, '\xBF\x84\xB5j\x92\xA4\xD6`\xD3\xAF\x17\xEB\x1C\xF0'...')
+#1 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Array)
+#2 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-15 23:39:13 --> TypeError: openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 97.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt([...], 'AES-256-CTR', 'XU“Ì’g™¬<≤õfÌ!|øÏÛËŸE◊ü¥¬TÓü,∫≈◊52É?˙ÉE:ø‘GÔ=KDêÏ•Ï˙vÍ', 1, 'ôós.¨{49˛*≈≈')
+ 2 APPPATH\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:39:13 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 C:\xampp\htdocs\ci_api\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 C:\xampp\htdocs\ci_api\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(TypeError), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#6 {main}
+  thrown
+„ÄêPrevious Exception„Äë
+TypeError
+openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+#0 C:\xampp\htdocs\ci_api\system\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt(Array, 'AES-256-CTR', 'XU\xD2\xED\xD5g\xAA\x02\x0E\xC2\x18<\xB2\r\x9B...', 1, '\x99\x16\x97s.\xF0\xAC\x07{49\x02\xFE*\xC5...')
+#1 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Array)
+#2 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-15 23:39:20 --> TypeError: openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 97.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt([...], 'AES-256-CTR', 'XU“Ì’g™¬<≤õfÌ!|øÏÛËŸE◊ü¥¬TÓü,∫≈◊52É?˙ÉE:ø‘GÔ=KDêÏ•Ï˙vÍ', 1, '·OK<J8cUC6◊€7')
+ 2 APPPATH\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:39:20 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 C:\xampp\htdocs\ci_api\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 C:\xampp\htdocs\ci_api\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(TypeError), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#6 {main}
+  thrown
+„ÄêPrevious Exception„Äë
+TypeError
+openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+#0 C:\xampp\htdocs\ci_api\system\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt(Array, 'AES-256-CTR', 'XU\xD2\xED\xD5g\xAA\x02\x0E\xC2\x18<\xB2\r\x9B...', 1, '\v\x16\xE1OK<J8cUC\x1C6\xD7\xDB...')
+#1 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Array)
+#2 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-15 23:39:24 --> TypeError: openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 97.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt([...], 'AES-256-CTR', 'XU“Ì’g™¬<≤õfÌ!|øÏÛËŸE◊ü¥¬TÓü,∫≈◊52É?˙ÉE:ø‘GÔ=KDêÏ•Ï˙vÍ', 1, 'b\' πYØsÃ€»Lx:')
+ 2 APPPATH\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:39:24 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 C:\xampp\htdocs\ci_api\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 C:\xampp\htdocs\ci_api\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(TypeError), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#6 {main}
+  thrown
+„ÄêPrevious Exception„Äë
+TypeError
+openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+#0 C:\xampp\htdocs\ci_api\system\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt(Array, 'AES-256-CTR', 'XU\xD2\xED\xD5g\xAA\x02\x0E\xC2\x18<\xB2\r\x9B...', 1, '\x1Cb'\xCA\xB9Y\xAFs\xCC\x01\x08\xDB\xC8Lx...')
+#1 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Array)
+#2 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-15 23:39:54 --> TypeError: openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 97.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt([...], 'AES-256-CTR', 'XU“Ì’g™¬<≤õfÌ!|øÏÛËŸE◊ü¥¬TÓü,∫≈◊52É?˙ÉE:ø‘GÔ=KDêÏ•Ï˙vÍ', 1, 'u∆§ïçˆ¨o\\˚‘÷,Øù')
+ 2 APPPATH\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:39:54 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 C:\xampp\htdocs\ci_api\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 C:\xampp\htdocs\ci_api\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(TypeError), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#6 {main}
+  thrown
+„ÄêPrevious Exception„Äë
+TypeError
+openssl_encrypt(): Argument #1 ($data) must be of type string, array given
+#0 C:\xampp\htdocs\ci_api\system\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt(Array, 'AES-256-CTR', 'XU\xD2\xED\xD5g\xAA\x02\x0E\xC2\x18<\xB2\r\x9B...', 1, 'u\xC6\xA4\x95\x8D\xF6\xACo\\\x1D\xFB\xD4\xD6,\xAF...')
+#1 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(28): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Array)
+#2 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-15 23:41:41 --> TypeError: openssl_encrypt(): Argument #1 ($data) must be of type string, stdClass given
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 97.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt(Object(stdClass), 'AES-256-CTR', 'XU“Ì’g™¬<≤õfÌ!|øÏÛËŸE◊ü¥¬TÓü,∫≈◊52É?˙ÉE:ø‘GÔ=KDêÏ•Ï˙vÍ', 1, '˘∆âûFÚ"t#≈ﬁ')
+ 2 APPPATH\Controllers\AuthController.php(29): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:41:41 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 C:\xampp\htdocs\ci_api\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 C:\xampp\htdocs\ci_api\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(TypeError), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#6 {main}
+  thrown
+„ÄêPrevious Exception„Äë
+TypeError
+openssl_encrypt(): Argument #1 ($data) must be of type string, stdClass given
+#0 C:\xampp\htdocs\ci_api\system\Encryption\Handlers\OpenSSLHandler.php(97): openssl_encrypt(Object(stdClass), 'AES-256-CTR', 'XU\xD2\xED\xD5g\xAA\x02\x0E\xC2\x18<\xB2\r\x9B...', 1, '\xF9\x14\xC6\x05\x89\x9EF\x18\x11\xF0\xF2"t#\xC5...')
+#1 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(29): CodeIgniter\Encryption\Handlers\OpenSSLHandler->encrypt(Object(stdClass))
+#2 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#3 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-15 23:43:34 --> CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 SYSTEMPATH\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8 characters, possibly incorrectly encoded')
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(322): CodeIgniter\Format\JSONFormatter->format([...])
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(248): CodeIgniter\HTTP\Response->formatBody([...], 'json')
+ 4 APPPATH\Controllers\AuthController.php(42): CodeIgniter\HTTP\Response->setJSON([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 23:43:34 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php:43
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\API\ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 C:\xampp\htdocs\ci_api\system\Debug\ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 500)
+#4 C:\xampp\htdocs\ci_api\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Format\Exceptions\FormatException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Format\Exceptions\FormatException))
+#6 {main}
+  thrown
+„ÄêPrevious Exception„Äë
+CodeIgniter\Format\Exceptions\FormatException
+Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+#0 C:\xampp\htdocs\ci_api\system\Format\JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\ci_api\system\HTTP\ResponseTrait.php(322): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\ci_api\system\HTTP\ResponseTrait.php(248): CodeIgniter\HTTP\Response->formatBody(Array, 'json')
+#3 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(42): CodeIgniter\HTTP\Response->setJSON(Array)
+#4 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#5 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#6 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ci_api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-15 23:49:22 --> Error: Call to a member function modify() on int
+in APPPATH\Controllers\AuthController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,197 @@
+ERROR - 2024-05-25 00:14:27 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+CRITICAL - 2024-05-25 00:14:27 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:14:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-25 00:14:56 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+CRITICAL - 2024-05-25 00:14:56 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:14:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-25 00:15:08 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+CRITICAL - 2024-05-25 00:15:08 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:15:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-25 00:15:40 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+CRITICAL - 2024-05-25 00:15:40 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:15:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-25 00:17:10 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+CRITICAL - 2024-05-25 00:17:10 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:17:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-25 00:40:31 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+CRITICAL - 2024-05-25 00:40:31 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:40:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-25 00:45:17 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+CRITICAL - 2024-05-25 00:45:17 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 00:45:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução DELETE conflitou com a restrição do REFERENCE "FK__SIS_DISPO__ram_t__693CA210". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'ram_type'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN (4)')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(535): CodeIgniter\Database\BaseConnection->query('DELETE FROM "SIS_WEB"."dbo"."SIS_RAM_TYPE"
+WHERE "id" IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\SQLSRV\Builder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\RamTypeController.php(77): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->deleteRamType(4)
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-25 02:19:09 --> ErrorException: Undefined property: stdClass::$ramTypeDescription
+in APPPATH\Controllers\RamTypeController.php on line 16.
+ 1 APPPATH\Controllers\RamTypeController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$ramTypeDescription', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\RamTypeController.php', 16)
+ 2 APPPATH\Controllers\RamTypeController.php(28): App\Controllers\RamTypeController->setDevice()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->createRamType()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()

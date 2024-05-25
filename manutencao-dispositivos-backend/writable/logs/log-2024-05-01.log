@@ -1,0 +1,21 @@
+CRITICAL - 2024-05-01 02:54:50 --> ArgumentCountError: Too few arguments to function CodeIgniter\HTTP\Message::setHeader(), 1 passed in C:\xampp\htdocs\ci_api\app\Filters\CorsFilter.php on line 19 and exactly 2 expected
+in SYSTEMPATH\HTTP\MessageTrait.php on line 141.
+ 1 APPPATH\Filters\CorsFilter.php(19): CodeIgniter\HTTP\Message->setHeader('Access-Control-Allow-Methods')
+ 2 SYSTEMPATH\Filters\Filters.php(184): App\Filters\CorsFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('vram/tipos', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-01 03:22:09 --> ErrorException: Attempt to read property "email" on null
+in APPPATH\Controllers\AuthController.php on line 17.
+ 1 APPPATH\Controllers\AuthController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "email" on null', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\AuthController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-01 03:22:12 --> ErrorException: Attempt to read property "email" on null
+in APPPATH\Controllers\AuthController.php on line 17.
+ 1 APPPATH\Controllers\AuthController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "email" on null', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\AuthController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

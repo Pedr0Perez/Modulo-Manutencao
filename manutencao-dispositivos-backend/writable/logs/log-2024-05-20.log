@@ -1,0 +1,25 @@
+ERROR - 2024-05-20 22:19:38 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+CRITICAL - 2024-05-20 22:19:39 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(75): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-20 22:19:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'ana\', \'julia tadeu\', \'pedro.perezrigi@gmail.com\', \'\', \'$2y$10$7ytvAxr6ZirBmoCrWpRWmOyiEOvD2YoFwV5d.DpvdyDQxKQsDqH8m\', \'2024-05-01T03:00:00.000Z\', \'F\', \'\', \'\', \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'ana\', \'julia tadeu\', \'pedro.perezrigi@gmail.com\', \'\', \'$2y$10$7ytvAxr6ZirBmoCrWpRWmOyiEOvD2YoFwV5d.DpvdyDQxKQsDqH8m\', \'2024-05-01T03:00:00.000Z\', \'F\', \'\', \'\', \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(75): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()

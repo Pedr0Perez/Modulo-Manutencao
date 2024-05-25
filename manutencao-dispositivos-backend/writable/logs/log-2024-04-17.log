@@ -1,0 +1,233 @@
+ERROR - 2024-04-17 00:03:26 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+CRITICAL - 2024-04-17 00:03:26 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:03:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$bbNLXIXybvNkr0LOlmODFOsPJlFi4coxH3JwvLc5LCSOMgu4ARoUa\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$bbNLXIXybvNkr0LOlmODFOsPJlFi4coxH3JwvLc5LCSOMgu4ARoUa\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 00:03:58 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+CRITICAL - 2024-04-17 00:03:58 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...], false)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:03:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$G11v16cs1CA8htkKmX/wGeHEUDalmCqjs6Ck11tm.qdVKZYx244vi\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$G11v16cs1CA8htkKmX/wGeHEUDalmCqjs6Ck11tm.qdVKZYx244vi\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...], false)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 00:08:54 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+CRITICAL - 2024-04-17 00:08:54 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:08:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$Ck28J214/KwENDFCxfjWSuX2eXr5TXBva6CRB5KIfxfk4B8XBC/b.\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$Ck28J214/KwENDFCxfjWSuX2eXr5TXBva6CRB5KIfxfk4B8XBC/b.\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 00:09:07 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+CRITICAL - 2024-04-17 00:09:07 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:09:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$5p/mWa6KaPQbmrrlE2SDx.JIEdUJ1IsXgW5TwzzkjKCtryVBzygZS\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$5p/mWa6KaPQbmrrlE2SDx.JIEdUJ1IsXgW5TwzzkjKCtryVBzygZS\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 00:10:39 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+CRITICAL - 2024-04-17 00:10:39 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:10:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$SI/wikER8R7KiLTxBG36vefaL3jbD88XhXY5ixOxKCtFxpfXDC6oq\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$SI/wikER8R7KiLTxBG36vefaL3jbD88XhXY5ixOxKCtFxpfXDC6oq\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:10:45 --> ParseError: syntax error, unexpected identifier "a", expecting "function" or "const"
+in APPPATH\Controllers\UserController.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\UserController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 00:11:34 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+CRITICAL - 2024-04-17 00:11:34 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:11:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$Eeyf4xCE8LTc088UHvI7G.gIRj4fiLygvxxZtnvc/9qIZDzECh/Iq\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$Eeyf4xCE8LTc088UHvI7G.gIRj4fiLygvxxZtnvc/9qIZDzECh/Iq\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-17 00:17:48 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+CRITICAL - 2024-04-17 00:17:48 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 00:17:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (<NULL>).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$HAIKyxcMtWob3bmQd1Rm3.y0AisyTK3eB13i.9O9PYzoPMZ4yZLym\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Fernando\', \'Eduardo Vancetto\', \'fernandovancetto7@gmail.com\', NULL, \'$2y$10$HAIKyxcMtWob3bmQd1Rm3.y0AisyTK3eB13i.9O9PYzoPMZ4yZLym\', \'2003-09-05\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 01:00:54 --> ErrorException: Attempt to read property "userId" on array
+in APPPATH\Controllers\UserController.php on line 28.
+ 1 APPPATH\Controllers\UserController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "userId" on array', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->readAllUsers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 01:32:55 --> ErrorException: Cannot redeclare App\Controllers\UserController::createUser()
+in APPPATH\Controllers\UserController.php on line 112.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-04-17 01:36:46 --> ErrorException: Undefined property: stdClass::$password
+in APPPATH\Controllers\UserController.php on line 29.
+ 1 APPPATH\Controllers\UserController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 29)
+ 2 APPPATH\Controllers\UserController.php(118): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->updateUser(1)
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 01:37:11 --> ErrorException: Undefined property: stdClass::$password
+in APPPATH\Controllers\UserController.php on line 29.
+ 1 APPPATH\Controllers\UserController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 29)
+ 2 APPPATH\Controllers\UserController.php(118): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->updateUser(1)
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 01:38:04 --> ErrorException: Undefined property: stdClass::$password
+in APPPATH\Controllers\UserController.php on line 29.
+ 1 APPPATH\Controllers\UserController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 29)
+ 2 APPPATH\Controllers\UserController.php(118): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->updateUser(1)
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 01:38:09 --> ErrorException: Undefined property: stdClass::$password
+in APPPATH\Controllers\UserController.php on line 29.
+ 1 APPPATH\Controllers\UserController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 29)
+ 2 APPPATH\Controllers\UserController.php(118): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->updateUser(1)
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-17 01:38:33 --> TypeError: Cannot assign null to property App\Controllers\UserController::$password of type string
+in APPPATH\Controllers\UserController.php on line 29.
+ 1 APPPATH\Controllers\UserController.php(118): App\Controllers\UserController->setUser()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->updateUser(1)
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

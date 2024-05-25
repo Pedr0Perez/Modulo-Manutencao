@@ -1,0 +1,99 @@
+Tabela SIS_USERS
+
+USE SIS_WEB;
+
+CREATE TABLE SIS_USERS(
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	firstName VARCHAR(25),
+	lastName VARCHAR(50),
+	mail VARCHAR(320),
+	mail2 VARCHAR(320),
+	password VARCHAR(256),
+	birthDate DATE,
+	gender CHAR(1),
+	country VARCHAR(64),
+	city VARCHAR(64),
+	state VARCHAR(64),
+	CONSTRAINT UQ_mail_unico UNIQUE (mail),
+	CONSTRAINT UQ_mail2_unico (mail2)
+);
+
+-------------------------------------------------------------------
+
+Tabela SIS_DISPOSITIVOS
+
+USE SIS_WEB;
+
+CREATE TABLE SIS_DISPOSITIVOS (
+	id INT IDENTITY(1, 1) PRIMARY KEY
+	disp_type INT,
+	cpu VARCHAR(50),
+	gpu VARCHAR(50),
+	mb VARCHAR(50),
+	psu VARCHAR(50),
+	storage INT, -- deve ser especificado em GB
+	ram_qtd INT, -- deve ser especificado em GB
+	ram_type INT,
+	vram_qtd INT, -- deve ser especificado em GB
+	vram_type INT,
+	note VARCHAR(120),
+	FOREIGN KEY (disp_type) REFERENCES SIS_DISP_TYPE(id),
+	FOREIGN KEY (ram_type) REFERENCES SIS_RAM_TYPE(id),
+	FOREIGN KEY (vram_type) REFERENCES SIS_VRAM_TYPE(id)
+);
+
+-------------------------------------------------------------------
+
+Tabela TABLE SIS_DISP_TYPE
+
+USE SIS_WEB;
+
+CREATE TABLE SIS_DISP_TYPE (
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	type_disp VARCHAR(50)
+);
+
+-------------------------------------------------------------------
+
+Tabela TABLE SIS_RAM_TYPE
+
+USE SIS_WEB;
+
+CREATE TABLE SIS_RAM_TYPE (
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	type_name VARCHAR(50)
+);
+
+-------------------------------------------------------------------
+
+Tabela TABLE SIS_VRAM_TYPE
+
+USE SIS_WEB;
+
+CREATE TABLE SIS_VRAM_TYPE (
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	type_name VARCHAR(50)
+);
+
+-------------------------------------------------------------------
+
+Tabela SIS_OPLOG
+
+CREATE TABLE SIS_OPLOG(
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	operation SMALLINT,
+	module SMALLINT,
+	userId SMALLINT,
+	httpCode SMALLINT,
+	description VARCHAR(1024)
+);
+
+-------------------------------------------------------------------
+
+Tabela SIS_MOD
+
+CREATE TABLE SIS_MOD(
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	description VARCHAR(50),
+	observation VARCHAR(1024)
+);

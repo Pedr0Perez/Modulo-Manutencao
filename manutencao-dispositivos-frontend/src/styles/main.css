@@ -1,0 +1,125 @@
+:root {
+  --sis-color: #d32f2f;
+  --text-gray: #4f4f4f;
+  --text-mui-primary: #1976d2;
+}
+
+.god {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.card-page {
+  flex: 1;
+}
+
+.text-align-center {
+  text-align: center !important;
+}
+
+.text-gray {
+  color: var(--text-gray) !important;
+}
+
+.nav-link {
+  color: var(--text-gray);
+}
+.nav-link:hover {
+  color: var(--sis-color);
+}
+
+.nav-link.active {
+  color: var(--sis-color) !important;
+}
+
+.text-mui-primary {
+  color: var(--text-mui-primary) !important;
+}
+
+.content-page {
+  flex: 1;
+  display: flex;
+}
+
+.table-btn-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.table-btn {
+  color: var(--sis-color);
+  border: solid var(--sis-color) 1px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.table-btn:focus {
+  box-shadow: 0 0 4px 2px var(--sis-color);
+  color: var(--sis-color) !important;
+}
+.table-btn:hover {
+  background-color: var(--sis-color) !important;
+  color: #fff !important;
+}
+.table-btn:active {
+  border: solid var(--sis-color) 1px !important;
+  background-color: var(--sis-color) !important;
+  color: #fff !important;
+  box-shadow: 0 0 4px 2px var(--sis-color);
+}
+
+.MuiDialog-paper {
+  min-width: 500px !important;
+}
+
+.generic-element-container {
+  height: max-content;
+  width: max-content;
+}
+
+.css-z3c6am-MuiFormControl-root-MuiTextField-root {
+  width: 100%;
+}
+
+.overlay-dialog {
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 5;
+}
+
+.MuiDialog-paper {
+  border-radius: 1.375rem !important;
+}
+
+.MuiButtonBase-root:not(.anchor-btn) {
+  padding: 0.6rem !important;
+  border-radius: 1.375rem !important;
+}
+
+#customized-dialog-title {
+  padding-left: 32px !important;
+}
+
+.MuiDialogContent-root {
+  padding: 32px !important;
+}
+
+@media (max-width: 575px) {
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+}

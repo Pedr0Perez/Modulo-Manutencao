@@ -1,0 +1,433 @@
+CRITICAL - 2024-04-16 00:14:26 --> Error: Cannot use object of type CodeIgniter\I18n\Time as array
+in APPPATH\Controllers\AuthController.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:15:16 --> Error: Cannot use object of type CodeIgniter\I18n\Time as array
+in APPPATH\Controllers\AuthController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:16:35 --> Error: Cannot use object of type CodeIgniter\I18n\Time as array
+in APPPATH\Controllers\AuthController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:30:59 --> CodeIgniter\Encryption\Exceptions\EncryptionException: Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 139.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(139): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\BaseController.php(63): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('2bc591e30af791621c31af30d5bef8e20ed393b42b64d4d0d0e660055c5316fe7529aa25271268913842578b1f05e8d8cbaaa664ec32c16d03b2024c82044396bd069476147dd434c37fcf105f37b8c5ccdfdc4eb7a748b5d28531294e0f1039eaeaa8999a9307457ccaf5e8a3d5400ba28b41b6ff9f27a17342df189fd5aad0d98f597e')
+ 3 APPPATH\Controllers\BaseController.php(71): App\Controllers\BaseController->descriptografarToken('55b105b9f8b3cb0efe46ccfe91c6147f815b500f7411975e79c70fe96399f80f2bc591e30af791621c31af30d5bef8e20ed393b42b64d4d0d0e660055c5316fe7529aa25271268913842578b1f05e8d8cbaaa664ec32c16d03b2024c82044396bd069476147dd434c37fcf105f37b8c5ccdfdc4eb7a748b5d28531294e0f1039eaeaa8999a9307457ccaf5e8a3d5400ba28b41b6ff9f27a17342df189fd5aad0d98f597e')
+ 4 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:32:04 --> CodeIgniter\Encryption\Exceptions\EncryptionException: Decrypting: authentication failed.
+in SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php on line 139.
+ 1 SYSTEMPATH\Encryption\Handlers\OpenSSLHandler.php(139): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+ 2 APPPATH\Controllers\BaseController.php(63): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('3831356235303066373431313937356537396337306665393633393966383066326263353931653330616637393136323163333161663330643562656638653230656433393362343262363464346430643065363630303535633533313666653735323961613235323731323638393133383432353738623166303565386438636261616136363465633332633136643033623230323463383230343433393662643036393437363134376464343334633337666366313035663337623863356363646664633465623761373438623564323835333132393465306631303339656165616138393939613933303734353763636166356538613364353430306261323862343162366666396632376131373334326466313839666435616164306439386635393765')
+ 3 APPPATH\Controllers\BaseController.php(71): App\Controllers\BaseController->descriptografarToken('55b105b9f8b3cb0efe46ccfe91c6147f815b500f7411975e79c70fe96399f80f2bc591e30af791621c31af30d5bef8e20ed393b42b64d4d0d0e660055c5316fe7529aa25271268913842578b1f05e8d8cbaaa664ec32c16d03b2024c82044396bd069476147dd434c37fcf105f37b8c5ccdfdc4eb7a748b5d28531294e0f1039eaeaa8999a9307457ccaf5e8a3d5400ba28b41b6ff9f27a17342df189fd5aad0d98f597e')
+ 4 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:45:49 --> Exception: DateTime::__construct(): Failed to parse time string (2024-04-15 21:45:49:0449) at position 19 (:): Unexpected character
+in APPPATH\Controllers\BaseController.php on line 75.
+ 1 APPPATH\Controllers\BaseController.php(75): DateTime->__construct('2024-04-15 21:45:49:0449')
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:45:57 --> Exception: DateTime::__construct(): Failed to parse time string (2024-04-15 21:45:57:0457) at position 19 (:): Unexpected character
+in APPPATH\Controllers\BaseController.php on line 75.
+ 1 APPPATH\Controllers\BaseController.php(75): DateTime->__construct('2024-04-15 21:45:57:0457')
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:51:55 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\BaseController.php on line 76.
+ 1 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:52:04 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\BaseController.php on line 76.
+ 1 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:52:18 --> ErrorException: Attempt to read property "date" on string
+in APPPATH\Controllers\BaseController.php on line 76.
+ 1 APPPATH\Controllers\BaseController.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "date" on string', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php', 76)
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:52:22 --> ErrorException: Attempt to read property "expire" on string
+in APPPATH\Controllers\BaseController.php on line 76.
+ 1 APPPATH\Controllers\BaseController.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "expire" on string', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php', 76)
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:52:41 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\BaseController.php on line 78.
+ 1 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:53:29 --> TypeError: DateTime::__construct(): Argument #1 ($datetime) must be of type string, stdClass given
+in APPPATH\Controllers\BaseController.php on line 76.
+ 1 APPPATH\Controllers\BaseController.php(76): DateTime->__construct(Object(stdClass))
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:53:35 --> ErrorException: Undefined property: stdClass::$date
+in APPPATH\Controllers\BaseController.php on line 76.
+ 1 APPPATH\Controllers\BaseController.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$date', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php', 76)
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:53:41 --> Exception: DateTime::__construct(): Failed to parse time string (2024-04-16 01:39:24:0424) at position 19 (:): Unexpected character
+in APPPATH\Controllers\BaseController.php on line 76.
+ 1 APPPATH\Controllers\BaseController.php(76): DateTime->__construct('2024-04-16 01:39:24:0424')
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:54:04 --> Exception: DateTime::__construct(): Failed to parse time string (2024-04-16 01:39:24:0424) at position 19 (:): Unexpected character
+in APPPATH\Controllers\BaseController.php on line 75.
+ 1 APPPATH\Controllers\BaseController.php(75): DateTime->__construct('2024-04-16 01:39:24:0424')
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:55:24 --> Error: Call to a member function format() on string
+in APPPATH\Controllers\BaseController.php on line 75.
+ 1 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:55:39 --> ParseError: syntax error, unexpected token "->"
+in APPPATH\Controllers\BaseController.php on line 74.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BaseController')
+ 3 APPPATH\Controllers\UserController.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(311): include_once('C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UserController')
+ 7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UserController')
+ 8 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\UserController', true)
+ 9 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:58:00 --> TypeError: App\Controllers\BaseController::validarToken(): Return value must be of type bool, null returned
+in APPPATH\Controllers\BaseController.php on line 78.
+ 1 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 00:58:19 --> TypeError: App\Controllers\BaseController::descriptografarToken(): Return value must be of type string, stdClass returned
+in APPPATH\Controllers\BaseController.php on line 66.
+ 1 APPPATH\Controllers\BaseController.php(73): App\Controllers\BaseController->descriptografarToken('6b53c1133d1723c27ebc809492dc199371ced1802f9dcb7adeb1f1382d07b1ce1f3dcfecdf3b954ab5a7e860ea1cef04a67195c881ab405945d78f505120da4ab2c964a7077216de7fb42792c356cd985d76a757bf359f3409a6e15a588629043350d3caa315acc73f579a3fb51331eda48dccc908b0b0b25a8af3ef6fa542b729a05f32a9f1174a140b399fad165dd90528f22ab49fe0b60e5f57fb8db48e0fbdc828dd')
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:07:13 --> ErrorException: Undefined property: stdClass::$userCode
+in APPPATH\Controllers\BaseController.php on line 82.
+ 1 APPPATH\Controllers\BaseController.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$userCode', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php', 82)
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:07:32 --> ErrorException: Undefined property: stdClass::$userCode
+in APPPATH\Controllers\BaseController.php on line 82.
+ 1 APPPATH\Controllers\BaseController.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$userCode', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php', 82)
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:07:40 --> BadMethodCallException: Call to undefined method App\Models\UserModel::getResult
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\BaseController.php(84): CodeIgniter\Model->__call('getResult', [])
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:07:41 --> BadMethodCallException: Call to undefined method App\Models\UserModel::getResult
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\BaseController.php(84): CodeIgniter\Model->__call('getResult', [])
+ 2 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:08:19 --> ErrorException: hex2bin(): Hexadecimal input string must have an even length
+in APPPATH\Controllers\BaseController.php on line 65.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'hex2bin(): Hexadecimal input string must have an even length', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php', 65)
+ 2 APPPATH\Controllers\BaseController.php(65): hex2bin('6b53c1133d1723c27ebc809492dc199371ced1802f9dcb7adeb1f1382d07b1ce1f3dcfecdf3b954ab5a7e860ea1cef04a67195c881ab405945d78f505120da4ab2c964a7077216de7fb42792c356cd985d76a757bf359f3409a6e15a588629043350d3caa315acc73f579a3fb51331eda48dccc908b0b0b25a8af3ef6fa542b729a05f32a9f11274a140b399fad165dd90528f22ab49fe0b60e5f57fb8db48e0fbdc828dd')
+ 3 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->descriptografarToken('6b53c1133d1723c27ebc809492dc199371ced1802f9dcb7adeb1f1382d07b1ce1f3dcfecdf3b954ab5a7e860ea1cef04a67195c881ab405945d78f505120da4ab2c964a7077216de7fb42792c356cd985d76a757bf359f3409a6e15a588629043350d3caa315acc73f579a3fb51331eda48dccc908b0b0b25a8af3ef6fa542b729a05f32a9f11274a140b399fad165dd90528f22ab49fe0b60e5f57fb8db48e0fbdc828dd')
+ 4 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:11:15 --> ErrorException: hex2bin(): Hexadecimal input string must have an even length
+in APPPATH\Controllers\BaseController.php on line 65.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'hex2bin(): Hexadecimal input string must have an even length', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\BaseController.php', 65)
+ 2 APPPATH\Controllers\BaseController.php(65): hex2bin('6b53c1133d1723c27ebc809492dc199371ced1802f9dcb72adeb1f1382d07b1ce1f3dcfecdf3b954ab5a7e860ea1cef04a67195c881ab405945d78f505120da4ab2c964a7077216de7fb42792c356cd985d76a757bf359f3409a6e15a588629043350d3caa315acc73f579a3fb51331eda48dccc908b0b0b25a8af3ef6fa542b729a05f32a9f1174a140b399fad165dd90528f22ab49fe0b60e5f57fb8db48e0fbdc828dd')
+ 3 APPPATH\Controllers\BaseController.php(74): App\Controllers\BaseController->descriptografarToken('6b53c1133d1723c27ebc809492dc199371ced1802f9dcb72adeb1f1382d07b1ce1f3dcfecdf3b954ab5a7e860ea1cef04a67195c881ab405945d78f505120da4ab2c964a7077216de7fb42792c356cd985d76a757bf359f3409a6e15a588629043350d3caa315acc73f579a3fb51331eda48dccc908b0b0b25a8af3ef6fa542b729a05f32a9f1174a140b399fad165dd90528f22ab49fe0b60e5f57fb8db48e0fbdc828dd')
+ 4 APPPATH\Controllers\UserController.php(11): App\Controllers\BaseController->validarToken()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:17:28 --> Error: Call to a member function getResult() on array
+in APPPATH\Controllers\BaseController.php on line 86.
+ 1 APPPATH\Controllers\UserController.php(23): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 01:17:34 --> Error: Call to a member function get() on array
+in APPPATH\Controllers\BaseController.php on line 84.
+ 1 APPPATH\Controllers\UserController.php(23): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-16 22:16:40 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'userId' inválido.
+CRITICAL - 2024-04-16 22:16:40 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'userId' inválido.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = :userId:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+ 3 APPPATH\Controllers\BaseController.php(89): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\UserController.php(24): App\Controllers\BaseController->validarToken()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->readAllUsers()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:16:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'userId' inválido.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = 3')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = :userId:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+ 5 APPPATH\Controllers\BaseController.php(89): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\UserController.php(24): App\Controllers\BaseController->validarToken()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->readAllUsers()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-16 22:16:46 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'userId' inválido.
+CRITICAL - 2024-04-16 22:16:46 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'userId' inválido.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = :userId:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+ 3 APPPATH\Controllers\BaseController.php(89): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\UserController.php(24): App\Controllers\BaseController->validarToken()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->readAllUsers()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:16:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'userId' inválido.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = \'3\'')
+ 3 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "userId" = :userId:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+ 5 APPPATH\Controllers\BaseController.php(89): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\UserController.php(24): App\Controllers\BaseController->validarToken()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->readAllUsers()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:17:38 --> Error: Call to a member function getResult() on array
+in APPPATH\Controllers\BaseController.php on line 91.
+ 1 APPPATH\Controllers\UserController.php(24): App\Controllers\BaseController->validarToken()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->readAllUsers()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:24:03 --> ErrorException: Undefined property: stdClass::$firstName
+in APPPATH\Controllers\UserController.php on line 62.
+ 1 APPPATH\Controllers\UserController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$firstName', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 62)
+ 2 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:24:28 --> ErrorException: Undefined property: stdClass::$lastName
+in APPPATH\Controllers\UserController.php on line 63.
+ 1 APPPATH\Controllers\UserController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$lastName', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 63)
+ 2 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:24:39 --> ErrorException: Undefined property: stdClass::$country
+in APPPATH\Controllers\UserController.php on line 69.
+ 1 APPPATH\Controllers\UserController.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$country', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 69)
+ 2 APPPATH\Controllers\UserController.php(36): App\Controllers\UserController->setUser()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:24:45 --> ErrorException: Undefined property: App\Controllers\UserController::$nome
+in APPPATH\Controllers\UserController.php on line 41.
+ 1 APPPATH\Controllers\UserController.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UserController::$nome', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\UserController.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:40:35 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:41:45 --> ErrorException: Undefined property: stdClass::$CODE
+in APPPATH\Controllers\AuthController.php on line 76.
+ 1 APPPATH\Controllers\AuthController.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$CODE', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\AuthController.php', 76)
+ 2 APPPATH\Controllers\AuthController.php(63): App\Controllers\AuthController->setInformacaoUsuario(Object(stdClass))
+ 3 APPPATH\Controllers\AuthController.php(20): App\Controllers\AuthController->validarUsuario('pedro.perezrigi@gmail.com', 'root123')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:42:24 --> TypeError: Cannot assign null to property App\Controllers\AuthController::$nome of type string
+in APPPATH\Controllers\AuthController.php on line 77.
+ 1 APPPATH\Controllers\AuthController.php(63): App\Controllers\AuthController->setInformacaoUsuario(Object(stdClass))
+ 2 APPPATH\Controllers\AuthController.php(20): App\Controllers\AuthController->validarUsuario('pedro.perezrigi@gmail.com', 'root123')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-16 22:46:27 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (vidadeenderman@gmail.com).
+CRITICAL - 2024-04-16 22:46:27 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (vidadeenderman@gmail.com).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:46:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (vidadeenderman@gmail.com).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Pedro\', \'Perez Rigi Assumpção\', \'pedro.perezrigi@gmail.com\', \'vidadeenderman@gmail.com\', \'$2y$10$cwIvrDnEbZeADRfxMjGFtuqJvg01yEQyCfSTER4erpvaKEoAieIkm\', \'2003-08-11\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Pedro\', \'Perez Rigi Assumpção\', \'pedro.perezrigi@gmail.com\', \'vidadeenderman@gmail.com\', \'$2y$10$cwIvrDnEbZeADRfxMjGFtuqJvg01yEQyCfSTER4erpvaKEoAieIkm\', \'2003-08-11\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-16 22:46:42 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+CRITICAL - 2024-04-16 22:46:42 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:46:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (pedro.perezrigi@gmail.com).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Pedro\', \'Perez Rigi Assumpção\', \'pedro.perezrigi@gmail.com\', \'vidadeenderman2@gmail.com\', \'$2y$10$Akg4eGZbcxayY.0KrC1IJeWnB2fu6RLdPrqtUQvUKlw9bDTm1mw1K\', \'2003-08-11\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Pedro\', \'Perez Rigi Assumpção\', \'pedro.perezrigi@gmail.com\', \'vidadeenderman2@gmail.com\', \'$2y$10$Akg4eGZbcxayY.0KrC1IJeWnB2fu6RLdPrqtUQvUKlw9bDTm1mw1K\', \'2003-08-11\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:46:55 --> ErrorException: Undefined property: stdClass::$PASSWORD
+in APPPATH\Controllers\AuthController.php on line 65.
+ 1 APPPATH\Controllers\AuthController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$PASSWORD', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\AuthController.php', 65)
+ 2 APPPATH\Controllers\AuthController.php(20): App\Controllers\AuthController->validarUsuario('pedro.perezrigi@gmail.com', 'root123')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-16 22:47:53 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (vidadeenderman@gmail.com).
+CRITICAL - 2024-04-16 22:47:53 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (vidadeenderman@gmail.com).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-16 22:47:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_mail2_unico'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_USERS'. O valor de chave duplicada é (vidadeenderman@gmail.com).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Pedro\', \'Perez Rigi Assumpção\', \'pedro.perezrigi@gmail.com\', \'vidadeenderman@gmail.com\', \'$2y$10$F2BYysNPFvoLqktK82raeOFviC9zWoSPyd8MpbylAEIxzeW8XSIMO\', \'2003-08-11\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (\'Pedro\', \'Perez Rigi Assumpção\', \'pedro.perezrigi@gmail.com\', \'vidadeenderman@gmail.com\', \'$2y$10$F2BYysNPFvoLqktK82raeOFviC9zWoSPyd8MpbylAEIxzeW8XSIMO\', \'2003-08-11\', \'M\', \'Brasil\', \'Descalvado\', \'São Paulo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_USERS" ("firstName","lastName","mail","mail2","password","birthDate","gender","country","city","state") VALUES (:firstName:, :lastName:, :mail:, :mail2:, :password:, :birthDate:, :gender:, :country:, :city:, :state:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\UserController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->createUser()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

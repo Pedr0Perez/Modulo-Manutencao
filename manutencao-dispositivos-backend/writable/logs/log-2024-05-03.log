@@ -1,0 +1,28 @@
+CRITICAL - 2024-05-03 00:20:35 --> ParseError: syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 00:20:39 --> ParseError: syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 01:08:17 --> ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\ci_api\app\Config\Events.php:33)
+in APPPATH\Filters\CorsFilter.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\ci_api\\app\\Config\\Events.php:33)', 'C:\\xampp\\htdocs\\ci_api\\app\\Filters\\CorsFilter.php', 17)
+ 2 APPPATH\Filters\CorsFilter.php(17): header('Access-Control-Allow-Origin: *')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\CorsFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('login/auth', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(85): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 01:08:31 --> ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\ci_api\app\Config\Events.php:33)
+in APPPATH\Filters\CorsFilter.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify header information - headers already sent by (output started at C:\\xampp\\htdocs\\ci_api\\app\\Config\\Events.php:33)', 'C:\\xampp\\htdocs\\ci_api\\app\\Filters\\CorsFilter.php', 17)
+ 2 APPPATH\Filters\CorsFilter.php(17): header('Access-Control-Allow-Origin: *')
+ 3 SYSTEMPATH\Filters\Filters.php(184): App\Filters\CorsFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('login/auth', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(84): CodeIgniter\CodeIgniter->run()

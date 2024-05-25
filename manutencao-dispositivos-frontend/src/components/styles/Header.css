@@ -1,0 +1,30 @@
+.header {
+  height: 65px;
+  box-shadow: 0 0 2px 1px rgb(0, 0, 0, 0.3);
+  position: relative;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 0 16px;
+  position: relative;
+}
+
+.logo-system-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sis-logo-head-container {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.sis-logo-head {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}

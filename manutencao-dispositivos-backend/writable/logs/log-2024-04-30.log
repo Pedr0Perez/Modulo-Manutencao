@@ -1,0 +1,110 @@
+ERROR - 2024-04-30 00:00:17 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: syntax error, unexpected identifier "a", expecting "function" or "const". File: C'.
+ERROR - 2024-04-30 00:00:17 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-04-30 00:00:19 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: syntax error, unexpected identifier "a", expecting "function" or "const". File: C'.
+ERROR - 2024-04-30 00:00:19 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+CRITICAL - 2024-04-30 00:11:45 --> ErrorException: Array to string conversion
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 489.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(489): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci_api\\system\\HTTP\\ResponseTrait.php', 489)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(448): CodeIgniter\HTTP\Response->sendBody()
+ 3 SYSTEMPATH\CodeIgniter.php(1111): CodeIgniter\HTTP\Response->send()
+ 4 SYSTEMPATH\CodeIgniter.php(381): CodeIgniter\CodeIgniter->sendResponse()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 00:11:56 --> ErrorException: Array to string conversion
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 489.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(489): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci_api\\system\\HTTP\\ResponseTrait.php', 489)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(448): CodeIgniter\HTTP\Response->sendBody()
+ 3 SYSTEMPATH\CodeIgniter.php(1111): CodeIgniter\HTTP\Response->send()
+ 4 SYSTEMPATH\CodeIgniter.php(381): CodeIgniter\CodeIgniter->sendResponse()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 00:28:32 --> ErrorException: Array to string conversion
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 489.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(489): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci_api\\system\\HTTP\\ResponseTrait.php', 489)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(448): CodeIgniter\HTTP\Response->sendBody()
+ 3 SYSTEMPATH\CodeIgniter.php(1111): CodeIgniter\HTTP\Response->send()
+ 4 SYSTEMPATH\CodeIgniter.php(381): CodeIgniter\CodeIgniter->sendResponse()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 00:28:40 --> ErrorException: Array to string conversion
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 489.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(489): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\ci_api\\system\\HTTP\\ResponseTrait.php', 489)
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(448): CodeIgniter\HTTP\Response->sendBody()
+ 3 SYSTEMPATH\CodeIgniter.php(1111): CodeIgniter\HTTP\Response->send()
+ 4 SYSTEMPATH\CodeIgniter.php(381): CodeIgniter\CodeIgniter->sendResponse()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 02:14:33 --> ErrorException: Undefined property: stdClass::$dispType
+in APPPATH\Controllers\DeviceController.php on line 27.
+ 1 APPPATH\Controllers\DeviceController.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dispType', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\DeviceController.php', 27)
+ 2 APPPATH\Controllers\DeviceController.php(61): App\Controllers\DeviceController->setDevice()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DeviceController->createDevice()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DeviceController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-30 02:15:15 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna 'disp_type' inválido.
+ERROR - 2024-04-30 02:15:15 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Nome de coluna ''disp_type''.
+ERROR - 2024-04-30 02:15:15 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+ERROR - 2024-04-30 02:18:53 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_DISPO__disp___68487DD7". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISP_TYPE", column 'id'.
+ERROR - 2024-04-30 02:18:53 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflito'.
+ERROR - 2024-04-30 02:18:53 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Os dados de sequência ou binários estão truncados na tabela 'SIS_WEB.dbo.SIS_OPLOG', coluna 'description'. Valor truncado: 'Erro 500. Message: Uncaught CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driv'.
+CRITICAL - 2024-04-30 23:45:25 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\RamTypeController.php(58): CodeIgniter\Model->update(6, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->updateRamType(6)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 23:45:54 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\RamTypeController.php(58): CodeIgniter\Model->update(4, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->updateRamType(4)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 23:48:35 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\RamTypeController.php(58): CodeIgniter\Model->update(4, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->updateRamType(4)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 23:48:39 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\RamTypeController.php(58): CodeIgniter\Model->update(55, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->updateRamType(55)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 23:48:57 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1778.
+ 1 SYSTEMPATH\BaseModel.php(1778): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(956): CodeIgniter\BaseModel->transformDataToArray([], 'update')
+ 3 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [])
+ 4 APPPATH\Controllers\RamTypeController.php(58): CodeIgniter\Model->update(55, [])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->updateRamType(55)
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 23:49:22 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\RamTypeController.php(58): CodeIgniter\Model->update(6, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->updateRamType(55)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-30 23:49:34 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 970.
+ 1 SYSTEMPATH\BaseModel.php(970): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(807): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\RamTypeController.php(58): CodeIgniter\Model->update(6, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RamTypeController->updateRamType(55)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RamTypeController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
