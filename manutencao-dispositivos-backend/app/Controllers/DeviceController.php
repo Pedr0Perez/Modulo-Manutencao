@@ -9,22 +9,24 @@ use CodeIgniter\HTTP\Response;
 class DeviceController extends BaseController
 {
     private int $dispType;
-    private string $cpu;
-    private string $gpu;
-    private string $motherBoard;
-    private string $psu;
-    private int $storage;
-    private int $ramQuantity;
-    private int $ramType;
-    private int $vramQuantity;
-    private int $vramType;
-    private string $note;
+    private string $dispName;
+    private ?string $cpu;
+    private ?string $gpu;
+    private ?string $motherBoard;
+    private ?string $psu;
+    private ?float $storage;
+    private ?float $ramQuantity;
+    private ?int $ramType;
+    private ?float $vramQuantity;
+    private ?int $vramType;
+    private ?string $note;
 
     private function setDevice()
     {
         $json = $this->request->getJSON();
 
         $this->dispType = $json->dispType;
+        $this->dispName = $json->dispName;
         $this->cpu = $json->cpu;
         $this->gpu = $json->gpu;
         $this->motherBoard = $json->motherboard;
@@ -64,6 +66,7 @@ class DeviceController extends BaseController
 
         $data = [
             "disp_type" => $this->dispType,
+            "disp_name" => $this->dispName,
             "cpu" => $this->cpu,
             "gpu" => $this->gpu,
             "mb" => $this->motherBoard,
@@ -96,6 +99,7 @@ class DeviceController extends BaseController
 
         $data = [
             "disp_type" => $this->dispType,
+            "disp_name" => $this->dispName,
             "cpu" => $this->cpu,
             "gpu" => $this->gpu,
             "mb" => $this->motherBoard,
