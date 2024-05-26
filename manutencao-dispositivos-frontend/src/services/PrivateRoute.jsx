@@ -6,15 +6,16 @@ import { setAuthToken } from "./ApiAxios";
 export default function PrivateRoute({ children }) {
   const [autenticado, setAutenticado] = useState(null);
 
+  const checkAuth = () => {
+    if (ValidarSessaoEToken()) {
+      setAutenticado(true);
+      return true;
+    }
+    setAutenticado(false);
+    return false;
+  };
+
   useEffect(() => {
-    const checkAuth = () => {
-      if (ValidarSessaoEToken()) {
-        setAutenticado(true);
-        return true;
-      }
-      setAutenticado(false);
-      return false;
-    };
     checkAuth();
   }, []);
 

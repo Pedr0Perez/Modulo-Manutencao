@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import HeaderSidebar from "../components/HeaderSidebar";
-import CardPage from "../components/CardPage";
 import AlterarTitlePagina from "../services/AlterarTitlePagina";
 import TextField from "@mui/material/TextField";
-import { FormHelperText } from "@mui/material";
 import { api } from "../services/ApiAxios";
 import Stack from "@mui/material/Stack";
 import LinearProgress from "@mui/material/LinearProgress";
@@ -36,7 +33,6 @@ import "react-toastify/dist/ReactToastify.css";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import { Skeleton } from "@mui/material";
-import { Typography } from "@mui/material";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import TableUsuariosSkeleton from "../components/UsuariosPage/TableUsuariosSkeleton";
@@ -193,7 +189,8 @@ export default function Usuarios() {
     requiredInputs.map((input) => {
       if (
         dadosUsuarioCadastrar[input] === "" ||
-        dadosUsuarioCadastrar[input] === null
+        dadosUsuarioCadastrar[input] === null ||
+        dadosUsuarioCadastrar[input].trim().length <= 0
       ) {
         validar = false;
       }

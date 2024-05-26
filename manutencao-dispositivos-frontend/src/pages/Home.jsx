@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import HeaderSidebar from "../components/HeaderSidebar";
-import CardPage from "../components/CardPage";
+import React, { useEffect } from "react";
 import AlterarTitlePagina from "../services/AlterarTitlePagina";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import CryptoJS, { AES } from "crypto-js";
 
 export default function Home() {
   useEffect(() => {

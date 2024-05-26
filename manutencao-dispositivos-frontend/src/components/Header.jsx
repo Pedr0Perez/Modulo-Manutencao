@@ -41,7 +41,7 @@ export default function Header() {
           >
             <g
               transform="translate(0.000000,740.000000) scale(0.100000,-0.100000)"
-              fill="var(--sis-color)"
+              fill="#d32f2f"
               stroke="none"
             >
               <path

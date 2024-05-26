@@ -6,14 +6,11 @@ import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Tooltip from "@mui/material/Tooltip";
-import PersonAdd from "@mui/icons-material/PersonAdd";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import { useNavigate } from "react-router-dom";
-import encryptjs from "encryptjs";
 import TooltipCustom from "./TooltipCustom";
+import DescriptografarDados from "../services/DescriptografarDados";
 
 export default function MenuUser() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -31,12 +28,8 @@ export default function MenuUser() {
     if (!localStorage.getItem("dataUser")) {
       return;
     }
-    const encrypt = encryptjs;
-    const secretKey = "sprintHannah2003";
-    const dadosSessaoDescriptografados = encrypt.decrypt(
-      localStorage.getItem("dataUser"),
-      secretKey,
-      256
+    const dadosSessaoDescriptografados = DescriptografarDados(
+      localStorage.getItem("dataUser")
     );
     const sessaoDados = JSON.parse(dadosSessaoDescriptografados);
     setNomeUsuario(sessaoDados.name);

@@ -1,9 +1,9 @@
-import encryptjs from "encryptjs";
+import DescriptografarDados from "../services/DescriptografarDados";
 
 export default function ValidarSessaoEToken() {
   const getCookie = (name) => {
     const cookieArr = document.cookie.split(";");
-    console.log(cookieArr);
+    //console.log(cookieArr);
 
     for (let i = 0; i < cookieArr.length; i++) {
       const cookiePair = cookieArr[i].split("=");
@@ -17,18 +17,6 @@ export default function ValidarSessaoEToken() {
     return false;
   };
 
-  const descriptografarSessao = () => {
-    const encrypt = encryptjs;
-    const secretKey = "sprintHannah2003";
-    const dadosSessaoDescriptografados = encrypt.decrypt(
-      localStorage.getItem("dataUser"),
-      secretKey,
-      256
-    );
-    const sessaoDados = JSON.parse(dadosSessaoDescriptografados);
-    return sessaoDados;
-  };
-
   const removerCookie = () => {
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   };
@@ -39,14 +27,14 @@ export default function ValidarSessaoEToken() {
 
   const validarSessaoAtiva = () => {
     if (!localStorage.getItem("dataUser")) {
-      alert("Armazenamento local não encontrado.");
+      //alert("Armazenamento local não encontrado.");
       removerCookie();
       return false;
     }
 
-    const sessaoDados = descriptografarSessao();
+    const sessaoDados = DescriptografarDados(localStorage.getItem("dataUser"));
 
-    //if (new Date() > sessaoDados.expire_date) return false;
+    if (new Date() > sessaoDados.expire_date) return false;
 
     return true;
   };

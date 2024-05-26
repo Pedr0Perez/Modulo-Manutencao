@@ -1,20 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import CardLogin from "../components/CardLogin";
-import DisplaySettingsIcon from "@mui/icons-material/DisplaySettings";
 import "./styles/Login.css";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ThemeBtn from "../components/ThemeBtn";
 import { red } from "@mui/material/colors";
 import { grey } from "@mui/material/colors";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import LinearProgress from "@mui/material/LinearProgress";
-import encryptjs from "encryptjs";
 import LogoSis from "../assets/logo-sis.png";
 import "./styles/Login.css";
 import { api, setAuthToken } from "../services/ApiAxios";
+import CriptografarDados from "../services/CriptografarDados";
 
 export default function Login() {
   const InvalidUserAlert = () => {
@@ -45,10 +44,6 @@ export default function Login() {
 
   const [senha, setSenha] = useState("");
 
-  const [desativarFormulario, setDesativarFormulario] = useState(false);
-
-  const loadingFormulario = () => {};
-
   const autenticarLogin = async () => {
     setInvalidUser(false);
     setExibirLoadForm(true);
@@ -75,12 +70,8 @@ export default function Login() {
 
           document.cookie = `token=${token};expires=${expire_date};path=/;`;
 
-          const encrypt = encryptjs;
-          const secretKey = "sprintHannah2003";
-          const dadosSessaoCriptografados = encrypt.encrypt(
-            JSON.stringify(dataUser),
-            secretKey,
-            256
+          const dadosSessaoCriptografados = CriptografarDados(
+            JSON.stringify(dataUser)
           );
 
           localStorage.setItem("dataUser", dadosSessaoCriptografados);

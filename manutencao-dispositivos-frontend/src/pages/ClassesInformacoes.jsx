@@ -3,7 +3,6 @@ import AlterarTitlePagina from "../services/AlterarTitlePagina";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import { Button, TextField } from "@mui/material";
-import Box from "@mui/material/Box";
 import { styled } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -26,7 +25,6 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import AddIcon from "@mui/icons-material/Add";
 import TooltipCustom from "../components/TooltipCustom";
 
@@ -110,7 +108,7 @@ export default function ClassesInformacoes() {
               </Avatar>
             </ListItemAvatar>
             <ListItemText primary={tipo[nome]} secondary={desc} />
-            <div className="btn-action-container">
+            <div className="btn-action-container ms-5">
               <TooltipCustom title="Apagar item">
                 <button
                   className="btn botao table-btn"
@@ -316,6 +314,7 @@ export default function ClassesInformacoes() {
         <Navbar />
         <div className="card text-center card-page m-2">
           <div className="card-header">
+            <h4 className="m-2 text-start">Classes de Informações</h4>
             <ul className="nav nav-tabs card-header-tabs">
               <li className="nav-item">
                 <div
@@ -324,7 +323,7 @@ export default function ClassesInformacoes() {
                   }
                   onClick={() => setCardPaginaAtual(0)}
                 >
-                  Dispositivo
+                  Tipos de Dispositivos
                 </div>
               </li>
               <li className="nav-item">
@@ -334,7 +333,7 @@ export default function ClassesInformacoes() {
                   }
                   onClick={() => setCardPaginaAtual(1)}
                 >
-                  Memórias
+                  Tipos de Memórias
                 </div>
               </li>
             </ul>
@@ -362,12 +361,14 @@ export default function ClassesInformacoes() {
                       </div>
                     </div>
                   </div>
-                  {ListaItem(
-                    "id",
-                    "type_disp",
-                    tiposDispositivo,
-                    "Dispositivo"
-                  )}
+                  <div className="custom-mui-list">
+                    {ListaItem(
+                      "id",
+                      "type_disp",
+                      tiposDispositivo,
+                      "Dispositivo"
+                    )}
+                  </div>
                 </div>
               )}
               {cardPaginaAtual === 1 && (
@@ -421,12 +422,14 @@ export default function ClassesInformacoes() {
                       </div>
                     </div>
                   </div>
-                  {ListaItem(
-                    "id",
-                    "type_name",
-                    ramOuVramCard === 0 ? tiposRam : tiposVram,
-                    ramOuVramCard === 0 ? "Memória RAM" : "Memória VRAM"
-                  )}
+                  <div className="custom-mui-list">
+                    {ListaItem(
+                      "id",
+                      "type_name",
+                      ramOuVramCard === 0 ? tiposRam : tiposVram,
+                      ramOuVramCard === 0 ? "Memória RAM" : "Memória VRAM"
+                    )}
+                  </div>
                 </div>
               )}
             </blockquote>
@@ -505,7 +508,9 @@ export default function ClassesInformacoes() {
                                 setConfirmarCadastrarApagarItemDialog(true);
                               }}
                               disabled={
-                                !dadosTipoItemCadastrarAtualizar.itemTypeDescription
+                                !dadosTipoItemCadastrarAtualizar.itemTypeDescription ||
+                                dadosTipoItemCadastrarAtualizar.itemTypeDescription.trim()
+                                  .length <= 0
                                   ? true
                                   : false
                               }
