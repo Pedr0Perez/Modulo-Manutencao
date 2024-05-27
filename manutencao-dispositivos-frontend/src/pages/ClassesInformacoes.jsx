@@ -19,7 +19,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import { DialogActions } from "@mui/material";
+import { DialogActions, Skeleton } from "@mui/material";
 import { toast, ToastContainer } from "react-toastify";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -44,6 +44,25 @@ export default function ClassesInformacoes() {
     buscarTodasMemoriasRam();
     buscarTodasMemoriasVram();
   }, []);
+
+  const SkeletonMuiList = () => {
+    return (
+      <div className="skeleton-container">
+        <Skeleton
+          variant="circular"
+          height="40px"
+          width="40px"
+          sx={{ marginLeft: "10px", marginBottom: "1rem" }}
+        ></Skeleton>
+        <Skeleton
+          height="150px"
+          width="240px"
+          variant="rounded"
+          sx={{ borderRadius: "8px" }}
+        ></Skeleton>
+      </div>
+    );
+  };
 
   const [tiposDispositivo, setTiposDispositivo] = useState(null);
   const [tiposRam, setTiposRam] = useState(null);
@@ -340,98 +359,107 @@ export default function ClassesInformacoes() {
           </div>
           <div className="card-body">
             <blockquote className="blockquote mb-0">
-              {cardPaginaAtual === 0 && (
-                <div className="lista-disp-container">
-                  <div className="btn-action-container">
-                    <div className="row" style={{ paddingLeft: "16px" }}>
-                      <div className="col-sm-auto">
-                        <div className="mb-1">
-                          <TooltipCustom title="Adicionar novo item">
-                            <button
-                              className="btn botao table-btn"
-                              onClick={() => {
-                                setOperacaoAtual(0);
-                                openDialog(setCadastrarItemDialog);
-                              }}
-                            >
-                              <AddIcon />
-                            </button>
-                          </TooltipCustom>
+              {(!tiposDispositivo || !tiposRam || !tiposVram) && (
+                <SkeletonMuiList />
+              )}
+              {tiposDispositivo &&
+                tiposRam &&
+                tiposVram &&
+                cardPaginaAtual === 0 && (
+                  <div className="lista-disp-container">
+                    <div className="btn-action-container">
+                      <div className="row" style={{ paddingLeft: "16px" }}>
+                        <div className="col-sm-auto">
+                          <div className="mb-1">
+                            <TooltipCustom title="Adicionar novo item">
+                              <button
+                                className="btn botao table-btn"
+                                onClick={() => {
+                                  setOperacaoAtual(0);
+                                  openDialog(setCadastrarItemDialog);
+                                }}
+                              >
+                                <AddIcon />
+                              </button>
+                            </TooltipCustom>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="custom-mui-list">
-                    {ListaItem(
-                      "id",
-                      "type_disp",
-                      tiposDispositivo,
-                      "Dispositivo"
-                    )}
-                  </div>
-                </div>
-              )}
-              {cardPaginaAtual === 1 && (
-                <div className="lista-ram-container">
-                  <div className="row" style={{ paddingLeft: "16px" }}>
-                    <div className="col-sm-auto">
-                      <div className="mb-1">
-                        <ThemeBtn>
-                          <FormControl>
-                            <RadioGroup
-                              row
-                              aria-labelledby="demo-row-radio-buttons-group-label"
-                              name="row-radio-buttons-group"
-                              value={ramOuVramCard}
-                              onChange={(e) => {
-                                setRamOuVramCard(parseInt(e.target.value));
-                              }}
-                            >
-                              <FormControlLabel
-                                value="0"
-                                control={<Radio />}
-                                label="RAM"
-                              />
-                              <FormControlLabel
-                                value="1"
-                                control={<Radio />}
-                                label="VRAM"
-                              />
-                            </RadioGroup>
-                          </FormControl>
-                        </ThemeBtn>
-                      </div>
+                    <div className="custom-mui-list">
+                      {ListaItem(
+                        "id",
+                        "type_disp",
+                        tiposDispositivo,
+                        "Dispositivo"
+                      )}
                     </div>
                   </div>
-                  <div className="btn-action-container">
+                )}
+              {tiposDispositivo &&
+                tiposRam &&
+                tiposVram &&
+                cardPaginaAtual === 1 && (
+                  <div className="lista-ram-container">
                     <div className="row" style={{ paddingLeft: "16px" }}>
                       <div className="col-sm-auto">
                         <div className="mb-1">
-                          <TooltipCustom title="Adicionar novo item">
-                            <button
-                              className="btn botao table-btn"
-                              onClick={() => {
-                                setOperacaoAtual(0);
-                                openDialog(setCadastrarItemDialog);
-                              }}
-                            >
-                              <AddIcon />
-                            </button>
-                          </TooltipCustom>
+                          <ThemeBtn>
+                            <FormControl>
+                              <RadioGroup
+                                row
+                                aria-labelledby="demo-row-radio-buttons-group-label"
+                                name="row-radio-buttons-group"
+                                value={ramOuVramCard}
+                                onChange={(e) => {
+                                  setRamOuVramCard(parseInt(e.target.value));
+                                }}
+                              >
+                                <FormControlLabel
+                                  value="0"
+                                  control={<Radio />}
+                                  label="RAM"
+                                />
+                                <FormControlLabel
+                                  value="1"
+                                  control={<Radio />}
+                                  label="VRAM"
+                                />
+                              </RadioGroup>
+                            </FormControl>
+                          </ThemeBtn>
                         </div>
                       </div>
                     </div>
+                    <div className="btn-action-container">
+                      <div className="row" style={{ paddingLeft: "16px" }}>
+                        <div className="col-sm-auto">
+                          <div className="mb-1">
+                            <TooltipCustom title="Adicionar novo item">
+                              <button
+                                className="btn botao table-btn"
+                                onClick={() => {
+                                  setOperacaoAtual(0);
+                                  openDialog(setCadastrarItemDialog);
+                                }}
+                              >
+                                <AddIcon />
+                              </button>
+                            </TooltipCustom>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="custom-mui-list">
+                      {ListaItem(
+                        "id",
+                        "type_name",
+                        ramOuVramCard === 0 ? tiposRam : tiposVram,
+                        ramOuVramCard === 0 ? "Memória RAM" : "Memória VRAM"
+                      )}
+                    </div>
                   </div>
-                  <div className="custom-mui-list">
-                    {ListaItem(
-                      "id",
-                      "type_name",
-                      ramOuVramCard === 0 ? tiposRam : tiposVram,
-                      ramOuVramCard === 0 ? "Memória RAM" : "Memória VRAM"
-                    )}
-                  </div>
-                </div>
-              )}
+                )}
             </blockquote>
           </div>
         </div>

@@ -95,7 +95,9 @@
   width: max-content;
   overflow-y: auto;
   margin-top: 1rem;
-  max-height: 525px;
+  max-height: 528px;
+  min-height: 120px;
+  min-width: 225px;
 }
 
 .overlay-dialog {

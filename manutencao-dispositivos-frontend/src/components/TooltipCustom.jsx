@@ -6,7 +6,6 @@ export default function TooltipCustom({ children, title }) {
   return (
     <Tooltip
       title={title}
-      //placement="right"
       TransitionComponent={Fade}
       disableInteractive
       enterDelay={350} 

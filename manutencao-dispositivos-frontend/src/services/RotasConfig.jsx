@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
+import ManutencoesDispositivos from "../pages/ManutencoesDispositivos";
 import Usuarios from "../pages/Usuarios";
 import Dispositivos from "../pages/Dispositivos";
 import ClassesInformacoes from "../pages/ClassesInformacoes";
@@ -28,6 +29,14 @@ export default function RotasConfig() {
             </PrivateRoute>
           }
           path="/"
+        />
+        <Route
+          element={
+            <PrivateRoute>
+              <ManutencoesDispositivos />
+            </PrivateRoute>
+          }
+          path="/manutencoesdispositivos"
         />
         <Route
           element={
