@@ -19,7 +19,7 @@ class UserController extends BaseController
     private string $city;
     private string $state;
 
-    private function setUser()
+    private function setUser(): void
     {
         $json = $this->request->getJSON();
 

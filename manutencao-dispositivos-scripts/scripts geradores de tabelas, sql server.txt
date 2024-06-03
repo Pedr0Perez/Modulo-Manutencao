@@ -1,4 +1,4 @@
-Tabela SIS_USERS
+--Tabela SIS_USERS
 
 USE SIS_WEB;
 
@@ -20,7 +20,42 @@ CREATE TABLE SIS_USERS(
 
 -------------------------------------------------------------------
 
-Tabela SIS_DISPOSITIVOS
+--Tabela SIS_ESTADOS_MANUTENCOES
+
+USE SIS_WEB;
+
+CREATE TABLE SIS_ESTADOS_MANUTENCOES (
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	description VARCHAR(256),
+	date_create DATETIME NOT NULL,
+	user_id INT NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES SIS_USERS(id),
+);
+
+-------------------------------------------------------------------
+
+--Tabela SIS_MANUTENCOES_DISP
+
+USE SIS_WEB;
+
+CREATE TABLE SIS_MANUTENCOES_DISP (
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	manut_entry INT NOT NULL,
+	disp_id INT,
+	user_id INT,
+	it_ended CHAR(1),
+	date_create DATETIME2(4),
+	date_ended DATETIME2(4),
+	description VARCHAR(256),
+	status CHAR(1), --A (ativo), D (desativado)
+	FOREIGN KEY (user_id) REFERENCES SIS_USERS(id),
+	FOREIGN KEY (disp_id) REFERENCES SIS_DISPOSITIVOS(id),
+	CONSTRAINT UQ_entry_unique UNIQUE (manut_entry),
+);
+
+-------------------------------------------------------------------
+
+--Tabela SIS_DISPOSITIVOS
 
 USE SIS_WEB;
 
@@ -45,7 +80,7 @@ CREATE TABLE SIS_DISPOSITIVOS (
 
 -------------------------------------------------------------------
 
-Tabela TABLE SIS_DISP_TYPE
+--Tabela TABLE SIS_DISP_TYPE
 
 USE SIS_WEB;
 
@@ -56,7 +91,7 @@ CREATE TABLE SIS_DISP_TYPE (
 
 -------------------------------------------------------------------
 
-Tabela TABLE SIS_RAM_TYPE
+--Tabela TABLE SIS_RAM_TYPE
 
 USE SIS_WEB;
 
@@ -67,7 +102,7 @@ CREATE TABLE SIS_RAM_TYPE (
 
 -------------------------------------------------------------------
 
-Tabela TABLE SIS_VRAM_TYPE
+--Tabela TABLE SIS_VRAM_TYPE
 
 USE SIS_WEB;
 
@@ -78,7 +113,7 @@ CREATE TABLE SIS_VRAM_TYPE (
 
 -------------------------------------------------------------------
 
-Tabela SIS_OPLOG
+--Tabela SIS_OPLOG
 
 CREATE TABLE SIS_OPLOG(
 	id INT IDENTITY(1, 1) PRIMARY KEY,
@@ -91,7 +126,7 @@ CREATE TABLE SIS_OPLOG(
 
 -------------------------------------------------------------------
 
-Tabela SIS_MOD
+--Tabela SIS_MOD
 
 CREATE TABLE SIS_MOD(
 	id INT IDENTITY(1, 1) PRIMARY KEY,

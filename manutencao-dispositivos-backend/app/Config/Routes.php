@@ -12,6 +12,13 @@ $routes->get('/', 'Home::index');
 //Módulo de autenticação de usuários
 $routes->post('/login/auth', 'AuthController::index');
 
+$routes->get('/manutencoes', 'MaintenanceController::readAllMaintenance');
+$routes->get('/manutencoes/(:num)', 'MaintenanceController::readMaintenanceById/$1');
+$routes->post('/manutencoes/abrir', 'MaintenanceController::createMaintenance');
+$routes->patch('/manutencoes/atualizar/(:num)', 'MaintenanceController::updateMaintenance/$1');
+$routes->get('/manutencoes/desativar/(:num)', 'MaintenanceController::disableMaintenance/$1');
+$routes->get('/manutencoes/finalizar/(:num)', 'MaintenanceController::finishMaintenance/$1');
+
 //Módulo de usuários
 $routes->get('/usuarios', 'UserController::readAllUsers'); //Retorna a lista de todos usuários cadastrados
 $routes->get('/usuarios/(:num)', 'UserController::readUserById/$1'); //Realiza a l

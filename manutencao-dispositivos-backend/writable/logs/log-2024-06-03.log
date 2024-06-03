@@ -1,0 +1,358 @@
+CRITICAL - 2024-06-03 02:27:44 --> ErrorException: Attempt to read property "description" on null
+in APPPATH\Controllers\MaintenanceController.php on line 22.
+ 1 APPPATH\Controllers\MaintenanceController.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "description" on null', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\MaintenanceController.php', 22)
+ 2 APPPATH\Controllers\MaintenanceController.php(34): App\Controllers\MaintenanceController->setMaintanence()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 02:28:56 --> ErrorException: Attempt to read property "description" on null
+in APPPATH\Controllers\MaintenanceController.php on line 22.
+ 1 APPPATH\Controllers\MaintenanceController.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "description" on null', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\MaintenanceController.php', 22)
+ 2 APPPATH\Controllers\MaintenanceController.php(34): App\Controllers\MaintenanceController->setMaintanence()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 02:55:10 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 588.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(588): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\MaintenanceController.php(21): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 APPPATH\Controllers\MaintenanceController.php(52): App\Controllers\MaintenanceController->setMaintanence()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 02:56:15 --> TypeError: Cannot assign null to property App\Controllers\MaintenanceController::$itEnded of type string
+in APPPATH\Controllers\MaintenanceController.php on line 27.
+ 1 APPPATH\Controllers\MaintenanceController.php(52): App\Controllers\MaintenanceController->setMaintanence()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 02:58:32 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_entry_unique'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_MANUTENCOES_DISP'. O valor de chave duplicada é (1).
+CRITICAL - 2024-06-03 02:58:32 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_entry_unique'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_MANUTENCOES_DISP'. O valor de chave duplicada é (1).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 02:58:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violação da restrição UNIQUE KEY 'UQ_entry_unique'. Não é possível inserir a chave duplicada no objeto 'dbo.SIS_MANUTENCOES_DISP'. O valor de chave duplicada é (1).
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (1, 55, \'2024-06-03 02:58:32\', 1, \'N\', \'TESTE\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (1, 55, \'2024-06-03 02:58:32\', 1, \'N\', \'TESTE\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:00:12 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+CRITICAL - 2024-06-03 03:00:12 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:00:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 55, \'2024-06-03 03:00:12\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 55, \'2024-06-03 03:00:12\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:00:17 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+CRITICAL - 2024-06-03 03:00:17 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:00:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 5, \'2024-06-03 03:00:17\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 5, \'2024-06-03 03:00:17\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:00:20 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+CRITICAL - 2024-06-03 03:00:20 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:00:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A instrução INSERT conflitou com a restrição do FOREIGN KEY "FK__SIS_MANUT__disp___3864608B". O conflito ocorreu no banco de dados "SIS_WEB", tabela "dbo.SIS_DISPOSITIVOS", column 'id'.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 1, \'2024-06-03 03:00:20\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 1, \'2024-06-03 03:00:20\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:04:56 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 03:04:56 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:04:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (4, 2, \'1717383896\', 1, \'N\', \'TESTE 3\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (4, 2, \'1717383896\', 1, \'N\', \'TESTE 3\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:06:37 --> ArgumentCountError: DateTimeImmutable::getTimestamp() expects exactly 0 arguments, 1 given
+in APPPATH\Controllers\BaseController.php on line 106.
+ 1 APPPATH\Controllers\BaseController.php(106): DateTimeImmutable->getTimestamp('America/Sao_Paulo')
+ 2 APPPATH\Controllers\MaintenanceController.php(51): App\Controllers\BaseController->retornarDataHoraAtual()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 00:12:58 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 00:12:58 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 00:12:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (1, 2, \'2024-06-03 00:12:58:0658\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (1, 2, \'2024-06-03 00:12:58:0658\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 00:14:11 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 00:14:11 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 00:14:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'GETDATE()\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'GETDATE()\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:18:43 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 03:18:43 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:18:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'2024-06-03 00:18:43:0643\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'2024-06-03 00:18:43:0643\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:18:51 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 03:18:51 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:18:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'2024-06-03 00:18:51:5151\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'2024-06-03 00:18:51:5151\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:19:36 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 03:19:36 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:19:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'2024-06-03 00:19:36.933114\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (3, 2, \'2024-06-03 00:19:36.933114\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:23:30 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 03:23:30 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:23:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (4, 2, \'2024-03-06 00:23:30:0630\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (4, 2, \'2024-03-06 00:23:30:0630\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-03 03:26:40 --> [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+CRITICAL - 2024-06-03 03:26:40 --> CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:26:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha ao converter data e/ou hora da cadeia de caracteres.
+in SYSTEMPATH\Database\SQLSRV\Connection.php on line 482.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\SQLSRV\Connection->execute('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 2, \'2024-06-03 00:26:40:0640\', 1, \'N\', \'TESTE 2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (2, 2, \'2024-06-03 00:26:40:0640\', 1, \'N\', \'TESTE 2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO "SIS_WEB"."dbo"."SIS_MANUTENCOES_DISP" ("manut_entry","disp_id","date_create","user_id","it_ended","description") VALUES (:manut_entry:, :disp_id:, :date_create:, :user_id:, :it_ended:, :description:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\MaintenanceController.php(65): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 03:32:34 --> Exception: DateTimeZone::__construct(): Unknown or bad timezone (America/Sao Paulo)
+in SYSTEMPATH\I18n\TimeTrait.php on line 90.
+ 1 SYSTEMPATH\I18n\TimeTrait.php(90): DateTimeZone->__construct('America/Sao Paulo')
+ 2 APPPATH\Controllers\BaseController.php(106): CodeIgniter\I18n\Time->__construct('now', 'America/Sao Paulo')
+ 3 APPPATH\Controllers\MaintenanceController.php(24): App\Controllers\BaseController->retornarDataHoraAtual()
+ 4 APPPATH\Controllers\MaintenanceController.php(51): App\Controllers\MaintenanceController->setMaintanence()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->createMaintenance()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-03 04:20:17 --> ErrorException: Undefined property: stdClass::$deviceId
+in APPPATH\Controllers\MaintenanceController.php on line 23.
+ 1 APPPATH\Controllers\MaintenanceController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$deviceId', 'C:\\xampp\\htdocs\\ci_api\\app\\Controllers\\MaintenanceController.php', 23)
+ 2 APPPATH\Controllers\MaintenanceController.php(103): App\Controllers\MaintenanceController->setMaintenance()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MaintenanceController->disableMaintenance(1)
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MaintenanceController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()

@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\DeviceModel;
-use App\Models\DeviceTypeModel;
 use CodeIgniter\HTTP\Response;
 
 class DeviceController extends BaseController
@@ -21,7 +20,7 @@ class DeviceController extends BaseController
     private ?int $vramType;
     private ?string $note;
 
-    private function setDevice()
+    private function setDevice(): void
     {
         $json = $this->request->getJSON();
 
@@ -39,7 +38,7 @@ class DeviceController extends BaseController
         $this->note = $json->note;
     }
 
-    public function readAllDevices(): array | object
+    public function readAllDevices(): object
     {
         $deviceModel = new DeviceModel();
 

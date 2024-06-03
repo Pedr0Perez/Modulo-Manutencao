@@ -10,13 +10,13 @@ class RamTypeController extends BaseController
 
     private string $itemTypeDescription;
 
-    private function setDevice()
+    private function setDevice(): void
     {
         $json = $this->request->getJSON();
         $this->itemTypeDescription = mb_strtoupper($json->itemTypeDescription, 'UTF-8');
     }
 
-    public function readAllRamTypes()
+    public function readAllRamTypes(): object
     {
         $ramTypeModel = new RamTypeModel();
 

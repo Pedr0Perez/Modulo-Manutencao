@@ -10,13 +10,13 @@ class DeviceTypeController extends BaseController
 
     private string $itemTypeDescription;
 
-    private function setDevice()
+    private function setDevice(): void
     {
         $json = $this->request->getJSON();
         $this->itemTypeDescription = $json->itemTypeDescription;
     }
 
-    public function readAllTypesDevices()
+    public function readAllTypesDevices(): object
     {
         $deviceTypeModel = new DeviceTypeModel();
 

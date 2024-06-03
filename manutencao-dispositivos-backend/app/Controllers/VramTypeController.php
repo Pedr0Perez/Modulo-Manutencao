@@ -10,13 +10,13 @@ class VramTypeController extends BaseController
 
     private string $itemTypeDescription;
 
-    private function setVramType()
+    private function setVramType(): void
     {
         $json = $this->request->getJSON();
         $this->itemTypeDescription = mb_strtoupper($json->itemTypeDescription, 'UTF-8');
     }
 
-    public function readAllVramTypes()
+    public function readAllVramTypes(): object
     {
         $ramTypeModel = new VramTypeModel();
 

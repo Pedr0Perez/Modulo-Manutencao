@@ -1,0 +1,27 @@
+ERROR - 2024-06-01 02:40:32 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha de logon do usuário 'sa'. Motivo: A senha da conta expirou. SQLSTATE: 28000, code: 18487 in C:\xampp\htdocs\ci_api\system\Database\SQLSRV\Connection.php:142
+Stack trace:
+#0 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLSRV\Connection->connect(false)
+#1 C:\xampp\htdocs\ci_api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci_api\system\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#3 C:\xampp\htdocs\ci_api\system\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+#4 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(58): CodeIgniter\Model->__call('get', Array)
+#5 C:\xampp\htdocs\ci_api\app\Controllers\AuthController.php(21): App\Controllers\AuthController->validarUsuario('pedro.perezrigi...', 'root123')
+#6 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(941): App\Controllers\AuthController->index()
+#7 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\xampp\htdocs\ci_api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci_api\public\index.php(96): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-01 02:40:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLSRV]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Falha de logon do usuário 'sa'. Motivo: A senha da conta expirou. SQLSTATE: 28000, code: 18487
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\SQLSRV\Builder.php(610): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "SIS_WEB"."dbo"."SIS_USERS"
+WHERE "mail" = :mail:', [...], false)
+ 3 SYSTEMPATH\Model.php(872): CodeIgniter\Database\SQLSRV\Builder->get()
+ 4 APPPATH\Controllers\AuthController.php(58): CodeIgniter\Model->__call('get', [])
+ 5 APPPATH\Controllers\AuthController.php(21): App\Controllers\AuthController->validarUsuario('pedro.perezrigi@gmail.com', 'root123')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AuthController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(96): CodeIgniter\CodeIgniter->run()

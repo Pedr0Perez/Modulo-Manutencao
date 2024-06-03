@@ -69,7 +69,7 @@ class Filters extends BaseConfig
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
     public array $filters = [
-        'auth_token_filter' => ['before' => ['usuarios', 'usuarios/*', 'dispositivos', 'dispositivos/*', 'ram', 'ram/*', 'vram', 'vram/*']],
+        'auth_token_filter' => ['before' => ['usuarios', 'usuarios/*', 'dispositivos', 'dispositivos/*', 'ram', 'ram/*', 'vram', 'vram/*', 'manutencoes', 'manutencoes/*']],
         'cors' => ['before' => ['/*']]
     ];
 }

@@ -9,7 +9,6 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use CodeIgniter\I18n\Time;
-use DateTime;
 use App\Models\UserModel;
 use App\Models\LogModel;
 use Exception;
@@ -61,7 +60,7 @@ abstract class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
     }
 
-    
+
 
     private function descriptografarToken(string $token): object
     {
@@ -71,7 +70,7 @@ abstract class BaseController extends Controller
         return json_decode($tokenDescriptografado);
     }
 
-    protected function validarToken()
+    protected function retornaTokenUsuarioDescriptografado()
     {
         try {
             if (!$this->request->getHeaderLine('Authorization'))
@@ -98,6 +97,14 @@ abstract class BaseController extends Controller
         } catch (Exception $e) {
             return false;
         }
+    }
+
+    protected function retornarDataHoraAtual(): string
+    {
+        helper('date');
+        $actualDateTime = new Time('now', 'America/Sao_Paulo');
+        $formatedDateTime = $actualDateTime->format('Y-m-d H:i:s');
+        return $formatedDateTime;
     }
 
     protected function retornarArrayMensagem(string $mensagem): object
