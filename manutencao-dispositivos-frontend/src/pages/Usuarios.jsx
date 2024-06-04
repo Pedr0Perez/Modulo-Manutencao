@@ -35,7 +35,9 @@ import "dayjs/locale/pt-br";
 import { Skeleton } from "@mui/material";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import TableUsuariosSkeleton from "../components/UsuariosPage/TableUsuariosSkeleton";
+import TooltipCustom from "../components/TooltipCustom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -324,41 +326,47 @@ export default function Usuarios() {
                       </StyledTableCell>
                       <StyledTableCell align="left">
                         <div className="table-btn-container">
-                          <button
-                            className="btn botao table-btn"
-                            onClick={() => {
-                              setIdUserAtual(row.id);
-                              setCadastrarOuAtualizarUsuario(1);
-                              setDadosUsuarioCadastrar({
-                                firstName: row.firstName,
-                                lastName: row.lastName,
-                                email: row.mail,
-                                email2: row.mail2,
-                                password: "pass-def",
-                                birthDate: row.birthDate,
-                                gender: row.gender,
-                                country: row.country,
-                                city: row.city,
-                                state: row.state,
-                              });
-                              setOperacaoAtual(1);
-                              openDialog(setCadastrarOuAtualizarUsuarioDialog);
-                            }}
-                          >
-                            <EditIcon />
-                          </button>
-                          <button
-                            className="btn botao table-btn"
-                            onClick={() => {
-                              setIdUserAtual(row.id);
-                              setOperacaoAtual(2);
-                              openDialog(
-                                setConfirmarCadastrarAtualizarOuApagarUsuarioDialog
-                              );
-                            }}
-                          >
-                            <DeleteIcon />
-                          </button>
+                          <TooltipCustom title="Atualizar usuário">
+                            <button
+                              className="btn botao table-btn"
+                              onClick={() => {
+                                setIdUserAtual(row.id);
+                                setCadastrarOuAtualizarUsuario(1);
+                                setDadosUsuarioCadastrar({
+                                  firstName: row.firstName,
+                                  lastName: row.lastName,
+                                  email: row.mail,
+                                  email2: row.mail2,
+                                  password: "pass-def",
+                                  birthDate: row.birthDate,
+                                  gender: row.gender,
+                                  country: row.country,
+                                  city: row.city,
+                                  state: row.state,
+                                });
+                                setOperacaoAtual(1);
+                                openDialog(
+                                  setCadastrarOuAtualizarUsuarioDialog
+                                );
+                              }}
+                            >
+                              <EditIcon />
+                            </button>
+                          </TooltipCustom>
+                          <TooltipCustom title="Apagar usuário">
+                            <button
+                              className="btn botao table-btn"
+                              onClick={() => {
+                                setIdUserAtual(row.id);
+                                setOperacaoAtual(2);
+                                openDialog(
+                                  setConfirmarCadastrarAtualizarOuApagarUsuarioDialog
+                                );
+                              }}
+                            >
+                              <DeleteIcon />
+                            </button>
+                          </TooltipCustom>
                         </div>
                       </StyledTableCell>
                     </StyledTableRow>
@@ -491,6 +499,7 @@ export default function Usuarios() {
           </div>
         </div>
       </main>
+      <Footer />
       {open && (
         <React.Fragment>
           <BootstrapDialog

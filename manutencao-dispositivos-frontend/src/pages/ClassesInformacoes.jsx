@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import AlterarTitlePagina from "../services/AlterarTitlePagina";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Button, TextField } from "@mui/material";
 import { styled } from "@mui/material";
 import List from "@mui/material/List";
@@ -464,6 +465,7 @@ export default function ClassesInformacoes() {
           </div>
         </div>
       </main>
+      <Footer />
       {open && (
         <React.Fragment>
           <BootstrapDialog

@@ -61,6 +61,10 @@ export default function Login() {
           const token = response.data.token;
           const expire_date = new Date(response.data.date_expire);
 
+          const expires = new Date();
+          expires.setTime(expires.getTime() + 4 * 60 * 60 * 1000); // 4 horas em milissegundos
+          const expiresString = expires.toUTCString();
+
           const dataUser = {
             email: response.data.email,
             name: response.data.allName,
@@ -69,6 +73,8 @@ export default function Login() {
           };
 
           document.cookie = `token=${token};expires=${expire_date};path=/;`;
+
+          console.log(expire_date + '\n' + expiresString);
 
           const dadosSessaoCriptografados = CriptografarDados(
             JSON.stringify(dataUser)

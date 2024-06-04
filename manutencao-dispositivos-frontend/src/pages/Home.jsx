@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AlterarTitlePagina from "../services/AlterarTitlePagina";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

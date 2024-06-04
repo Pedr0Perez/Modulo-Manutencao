@@ -30,6 +30,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Skeleton } from "@mui/material";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import TableDispositivosSkeleton from "../components/DispositivosPage/TableDispositivosSkeleton";
 import TooltipCustom from "../components/TooltipCustom";
 
@@ -542,6 +543,7 @@ export default function Dispositivos() {
           </div>
         </div>
       </main>
+      <Footer />
       {open && (
         <React.Fragment>
           <BootstrapDialog
